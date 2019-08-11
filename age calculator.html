@@ -1,0 +1,35 @@
+<!-- <!DOCTYPE html> -->
+<html>
+    <body>
+        <div align="center" >
+        <h1>AGE CALCULATOR</h1> <br>
+         <label for="date">Enter Birth Date Year<br>Ex. 1964 - 64</label> <br>
+         <input id="date" type="number"  >
+         <button onclick="calculate()" id="btn">Calculate</button>
+         <h2>Now Age In 2019 </h2> 
+         <h1 id="age"></h1>
+         </div>
+         <script>
+                 
+                var b = document.getElementById('date');
+
+                b.addEventListener("keyup",function(event){
+                    if(event.keyCode === 13){
+                        event.preventDefault();
+                        document.getElementById('btn').click();
+                    }
+                });
+            
+               function calculate(){
+                    var a = 1900;
+                    var b = document.getElementById('date').value;
+                    b = parseInt(b);
+                   a = a+b;
+                    
+                    document.getElementById('age').innerHTML = 2019-a;
+               }
+         </script>
+
+   
+    </body>
+</html>
