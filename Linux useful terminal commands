@@ -1,0 +1,49 @@
+kill running proccess on port
+
+-> fuser -k -n tcp 3000
+
+where 3000 is target port
+
+----------------------------------------------------------------
+
+Remove git repositry from project folder
+
+# Be careful, dangerous command, it will erase your repository 
+# Make sure that you run this from the right folder 
+
+-> rm -rf .git
+
+https://superuser.com/questions/599289/github-completely-messed-up-the-local-files-of-github-in-my-computer/599290
+
+Push projec folder to git
+
+https://gist.github.com/mindplace/b4b094157d7a3be6afd2c96370d39fad
+
+git add <File_Name>  {{For Single File}}
+git add .            {{For all the files in current Directory}}
+->git commit -m "my first commit"
+
+after these add git repo
+
+->git remote add origin "http// .....repo url.git"
+
+->git push -u origin master
+
+===================================
+As it is stated in the Error message you have to "fetch first." This worked for me. Use the command:
+
+git fetch origin master
+Then follow these steps to merge:
+
+git pull origin master
+git add .
+git commit -m 'your commit message'
+git push origin master
+
+----------------------------------------------------------------
+add .gitIgnore file & ignore node_modules
+
+-> touch .gitignore && echo "node_modules/" >> .gitignore && git rm -r --cached node_modules 
+
+https://stackoverflow.com/questions/29820791/git-ignore-node-modules-folder-everywhere
+----------------------------------------------------------------

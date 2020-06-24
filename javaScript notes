@@ -1,0 +1,13 @@
+#objects: - 
+	find all properties in object
+	console.log(Object.keys({x: 0, y: 0, z: 2}));
+	// → ["x", "y", "z"]
+	
+
+#copy one object propeties into another
+	let objectA = {a: 1, b: 2};
+	Object.assign(objectA, {b: 3, c: 4});
+	console.log(objectA);
+	// → {a: 1, b: 3, c: 4}
+	
+	
